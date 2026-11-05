@@ -1,0 +1,50 @@
+{
+ "BTCIDR": {
+  "n": 25,
+  "median_pct": 0.0245,
+  "dipakai_pct": 0.0245,
+  "catatan": ""
+ },
+ "XRPIDR": {
+  "n": 25,
+  "median_pct": 0.1198,
+  "dipakai_pct": 0.1198,
+  "catatan": ""
+ },
+ "ETHIDR": {
+  "n": 25,
+  "median_pct": 0.0068,
+  "dipakai_pct": 0.02,
+  "catatan": ""
+ },
+ "DOGEIDR": {
+  "n": 1,
+  "median_pct": 0.2148,
+  "dipakai_pct": 0.3,
+  "catatan": "snapshot <5: dipakai minimal 0,30% (konservatif)"
+ },
+ "TRXIDR": {
+  "n": 1,
+  "median_pct": 0.293,
+  "dipakai_pct": 0.3,
+  "catatan": "snapshot <5: dipakai minimal 0,30% (konservatif)"
+ },
+ "BNBIDR": {
+  "n": 1,
+  "median_pct": 0.6989,
+  "dipakai_pct": 0.6989,
+  "catatan": "snapshot <5: dipakai minimal 0,30% (konservatif)"
+ },
+ "ADAIDR": {
+  "n": 1,
+  "median_pct": 0.2238,
+  "dipakai_pct": 0.3,
+  "catatan": "snapshot <5: dipakai minimal 0,30% (konservatif)"
+ },
+ "SOLIDR": {
+  "n": 24,
+  "median_pct": 0.1074,
+  "dipakai_pct": 0.1074,
+  "catatan": ""
+ }
+}

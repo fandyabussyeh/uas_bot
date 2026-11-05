@@ -1,0 +1,3 @@
+{ "name": "uas-bot-dryrun-indodax", "version": "1.0.0", "type": "module", "private": true,
+  "scripts": { "backtest": "node scripts/run_report.mjs", "hitung": "node scripts/hitung_ulang.mjs", "dashboard": "node scripts/make_dashboard.mjs", "test": "node tests/test_local.mjs" },
+  "engines": { "node": ">=18" } }

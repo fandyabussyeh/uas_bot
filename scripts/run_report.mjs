@@ -1,0 +1,24 @@
+// scripts/run_report.mjs — laporan backtest lengkap (ablation, biaya, sensitivitas). Jalankan: node scripts/run_report.mjs
+import fs from 'node:fs';
+import { run, metrics, bh, PARAMS, UNI, SP } from '../lib/bt.mjs';
+const MAIN = UNI;
+fs.mkdirSync('out', { recursive: true });
+const f = (m, n = 1) => (m * 100).toFixed(n) + '%', out = { params: PARAMS, spreads: SP, universe_main: MAIN, runs: {} };
+const OFF = { OVERLAY: false, SIDEWAYS: false, FEEGUARD: false, TIMEGUARD: false };
+const R = (l, U, o = {}, c = 1, fee) => { const r = run(U, o, c, undefined, Infinity, fee), m = metrics(r); out.runs[l] = m; console.log(l.padEnd(52), 'CAGR', f(m.cagr).padStart(6), 'MDD', f(m.mdd).padStart(7), 'N', String(m.N).padStart(4), 'win', f(m.win, 0).padStart(4), 'PF', m.pf.toFixed(2), 'biaya/laba', f(m.costShare, 0), 'expo', f(m.expo, 0)); return r; };
+const main = R('UTAMA (inti+gerbang+time-guard+fee-guard)', MAIN);
+out.trades = main.trades.map(t => ({ ...t, entry: new Date(t.entry * 1000).toISOString(), exit: new Date(t.exit * 1000).toISOString() }));
+fs.writeFileSync('out/orderlog_backtest.json', JSON.stringify(main.orderLog.map(o => ({ ...o, t: new Date(o.t * 1000).toISOString() }))));
+console.log('--- ablation (universe MAIN)');
+R('1. inti + gerbang absolut', MAIN, OFF); R('2. + overlay exit', MAIN, { ...OFF, OVERLAY: true }); R('3. + sideways (ADX/CHOP/ER)', MAIN, { ...OFF, SIDEWAYS: true });
+R('4. + time-guard', MAIN, { ...OFF, TIMEGUARD: true }); R('5. + fee-guard', MAIN, { ...OFF, FEEGUARD: true }); R('6. UTAMA = 1+4+5', MAIN, {});
+R('7. UTAMA + sideways', MAIN, { SIDEWAYS: true }); R('8. UTAMA + overlay (tanpa time-stop)', MAIN, { OVERLAY: true }); R('9. rancangan penuh awal (semua modul)', MAIN, { OVERLAY: true, SIDEWAYS: true });
+R('10. rancangan penuh + time-stop 10 hari', MAIN, { OVERLAY: true, SIDEWAYS: true, TIMESTOP: true }); R('11. UTAMA tanpa gerbang absolut', MAIN, { GATE: false });
+console.log('--- biaya'); R('13. biaya 2x', MAIN, {}, 2, PARAMS.FEE * 2); R('14. fee 0,30%', MAIN, {}, 1, 0.003); R('15. fee 0,70%', MAIN, {}, 1, 0.007);
+console.log('--- sensitivitas ±20% / ±50%');
+for (const [l, o] of [['SEL 0,32', { SEL: .32 }], ['SEL 0,6', { SEL: .6 }], ['MIN_HOLD 24j', { MIN_HOLD_H: 24 }], ['MIN_HOLD 72j', { MIN_HOLD_H: 72 }], ['HURDLE 2,4', { HURDLE: 2.4 }], ['HURDLE 4,5', { HURDLE: 4.5 }], ['BAND_REL 0,16', { BAND_REL: .16 }], ['BAND_REL 0,3', { BAND_REL: .3 }], ['H_IN 4,8%', { H_IN: .048 }], ['H_IN 9%', { H_IN: .09 }], ['CAP 15%', { CAP: .15 }], ['CAP 30%', { CAP: .3 }], ['J {5,10,24,48}', { J: [5, 10, 24, 48] }], ['K {5,10,17}', { K: [5, 10, 17] }]]) R('S. ' + l, MAIN, o);
+out.bh = { BTC: bh('BTCIDR'), ETH: bh('ETHIDR') }; const m = out.runs['UTAMA (inti+gerbang+time-guard+fee-guard)'];
+console.log('Buy&hold BTC', f(out.bh.BTC.cagr), 'MDD', f(out.bh.BTC.mdd), '| ETH', f(out.bh.ETH.cagr), 'MDD', f(out.bh.ETH.mdd)); console.log('Per tahun:', JSON.stringify(Object.fromEntries(Object.entries(m.yret).map(([y, v]) => [y, f(v)]))), '| biaya', JSON.stringify(m.cost));
+console.log('Jumlah run backtest tercatat:', Object.keys(out.runs).length); const dly = []; let lastDay = -1; main.eqS.forEach(x => { const d = Math.floor(x.t / 86400); if (d !== lastDay) { dly.push([x.t, Math.round(x.eq)]); lastDay = d; } });
+out.equity_daily = dly; out.window = { start: main.eqS[0].t, end: main.eqS[main.eqS.length - 1].t };
+fs.writeFileSync('out/backtest_out.json', JSON.stringify(out, null, 1));
