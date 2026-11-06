@@ -1,0 +1,14 @@
+.env
+.env.*
+!.env.example
+node_modules
+.vercel
+data/*.csv
+data/snapshots*.jsonl
+/*_1D.csv
+/*_240.csv
+/snapshots.jsonl
+/snapshots_errors.log
+/run.log
+/run2.log
+out/

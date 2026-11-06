@@ -2,7 +2,8 @@
 import fs from 'node:fs';
 import { makeApi } from '../lib/indodax.mjs'; import { runTick, readLogs, freshState } from '../lib/tick.mjs'; import { memory } from '../lib/store.mjs'; import { compute } from '../scripts/hitung_ulang.mjs';
 const H4 = 14400, uni = JSON.parse(fs.readFileSync('config/universe.json', 'utf8')).universe, spreads = JSON.parse(fs.readFileSync('config/spreads.json', 'utf8'));
-const CSV = {}; for (const p of uni) CSV[p] = fs.readFileSync(`data/${p}_240.csv`, 'utf8').trim().split('\n').slice(1).map(l => l.split(',').map(Number)).map(r => ({ t: r[0], o: r[1], h: r[2], l: r[3], c: r[4], v: r[5] }));
+const DATA_DIR = process.env.DATA_DIR || (fs.existsSync('data/BTCIDR_240.csv') ? 'data' : '.');
+const CSV = {}; for (const p of uni) CSV[p] = fs.readFileSync(`${DATA_DIR}/${p}_240.csv`, 'utf8').trim().split('\n').slice(1).map(l => l.split(',').map(Number)).map(r => ({ t: r[0], o: r[1], h: r[2], l: r[3], c: r[4], v: r[5] }));
 let clock = 0, failNext = 0, depthEmpty = null;
 const mock = () => ({ errors: [], async serverTime() { if (failNext > 0) { failNext--; this.errors.push({ url: 'server_time', err: 'timeout (mock)' }); if (failNext >= 0 && failNext < 2) { /* retry berhasil */ } } return clock; },
   async bars(p, tf, to) { const a = CSV[p].filter(b => b.t <= to && b.t >= to - 700 * H4); const run = a[a.length - 1]; return a.map(b => ({ ...b })); },   // termasuk candle yang sedang berjalan sebagai elemen terakhir
