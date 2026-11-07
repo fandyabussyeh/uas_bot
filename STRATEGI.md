@@ -1,5 +1,5 @@
 # Strategi: Cohort Momentum Crypto (long-only, dry run Indodax)
-Baseline freeze: commit `466bf39`, 2026-11-07 07:54 WIB. Setelah freeze, perubahan berikutnya hanya memperbarui metadata identitas/fee; aturan, parameter, dan universe tidak diubah. Kode acuan: `lib/core.mjs` (dipakai identik oleh backtest dan bot).
+Baseline freeze: commit `519e62f` ("Record UAS strategy freeze baseline"), 2026-11-07 07:56 WIB; keputusan jendela forward test 7 hari (deviasi dari syarat soal 10 hari karena tenggat 14 Nov) dicatat pada `95db09e`. Setelah freeze, perubahan berikutnya hanya memperbarui metadata identitas/fee; aturan, parameter, dan universe tidak diubah. Kode acuan: `lib/core.mjs` (dipakai identik oleh backtest dan bot).
 
 ## Identitas & modal
 Nama: Muhammad Fandy Abussyeh; NIM: 25110200039; Kelas: Finance and Investment. Modal virtual Rp100.000.000. Long-only, tanpa short/margin/leverage. Timeframe: keputusan cohort dari candle 1D yang dibentuk dari 6 candle 4H (hari UTC); bot dipanggil tiap candle 4H tertutup (menit ke-7).
