@@ -19,7 +19,7 @@ BTC, XRP, ETH, DOGE, TRX, BNB, ADA, SOL. Kriteria diukur pada AWAL backtest (4 N
 9. **Eksekusi:** beli di ask, jual di bid dari order book live, habiskan level berikutnya (rata-rata tertimbang). Posisi dinilai pada best bid. Dilarang fill di mid/close. Backtest: fill di open bar berikutnya ± (setengah spread terukur + slippage 0,05%).
 
 ## Parameter beku (tidak dioptimasi; ditetapkan a priori) — lihat `PARAMS` di `lib/core.mjs`
-J {7,14,30,60}; K {7,14,21}; SEL 0,4 (1–3 koin); CAP 20%; H_IN 6% / H_OUT 2%; MIN_HOLD 48 jam; COOL 72 jam; HURDLE 3; BAND 20% & 1,5%; TURN_CAP 15%; MAXPOS 6; DLL 3%; MIN_ORDER Rp25.000; FEE = env `FEE_TAKER` (default 0,5%/sisi = asumsi konservatif; isi dari /api/pairs & halaman biaya, pakai yang lebih mahal).
+J {7,14,30,60}; K {7,14,21}; SEL 0,4 (1–3 koin); CAP 20%; H_IN 6% / H_OUT 2%; MIN_HOLD 48 jam; COOL 72 jam; HURDLE 3; BAND 20% & 1,5%; TURN_CAP 15%; MAXPOS 6; DLL 3%; MIN_ORDER Rp25.000; FEE = env `FEE_TAKER` (0,5%/sisi; konservatif dibanding taker jual IDR PRO 0,41555%).
 
 ## Modul diuji dan DITOLAK (kode ada, OFF) — bukti: `out/backtest_out.json`, `out/v2_out.json`, `out/mr_out.json`
 Overlay chandelier/stop volatilitas (trade 56 -> 260, CAGR 23,9% -> 17,0%); time-stop 10 hari (124 dari 197 trade, rata-rata -2,45%, CAGR ~1%); voting sideways ADX/CHOP/ER (42,8% -> 32,3% pada UTAMA); keluar cepat z7, rem portofolio ekuitas, CAP 15%/NMAX 4 (tidak lolos aturan terima); sleeve mean-reversion sideways (PF 0,48). Total ±45 run backtest dicoba: konfigurasi UTAMA dipilih IN-SAMPLE setelah melihat hasil.
@@ -34,6 +34,6 @@ Lihat `out/backtest_out.json` dan dashboard. UTAMA: CAGR 42,8%, MDD −25,6%, 69
 | Item | Nilai | URL | Tanggal akses |
 |---|---|---|---|
 | trade_fee_percent_taker (/api/pairs), pasangan IDR | 0,2% | https://indodax.com/api/pairs | 2026-11-07 |
-| All-in-Fee taker akun (termasuk komponen biaya yang berlaku) | [CEK Profile & Pengaturan akun; berlaku setelah perubahan 1 Okt 2026] | https://help.indodax.com/hc/id/articles/4416646599705-Rincian-Biaya-Transaksi-di-INDODAX | 2026-11-07 |
-| Dipakai dalam model saat ini | 0,5% per sisi (default konservatif; belum dapat dipastikan lebih tinggi dari All-in-Fee akun sampai nilai akun diverifikasi) | | 2026-11-07 |
+| Jadwal fee IDR PRO, taker beli / taker jual | 0,20555% / 0,41555% (nilai maksimum untuk model simetris: 0,41555%) | https://help.indodax.com/hc/id/articles/4416646599705-Rincian-Biaya-Transaksi-di-INDODAX | 2026-11-07; nilai diberikan pengguna |
+| Dipakai dalam model dan Vercel (`FEE_TAKER`) | 0,5% per sisi; lebih konservatif daripada maksimum IDR PRO 0,41555% | | 2026-11-07 |
 | Minimum order INDODAX Pro | Rp25.000 (Rp10.000 melalui Lite) | https://help.indodax.com/hc/id/articles/4416646599705-Rincian-Biaya-Transaksi-di-INDODAX | 2026-11-07 |
