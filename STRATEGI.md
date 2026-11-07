@@ -2,7 +2,7 @@
 Dokumen ini dibekukan saat freeze (isi hash commit & waktu di README). Kode acuan: `lib/core.mjs` (dipakai identik oleh backtest dan bot).
 
 ## Identitas & modal
-[ISI nama / NIM / kelas]. Modal virtual Rp100.000.000. Long-only, tanpa short/margin/leverage. Timeframe: keputusan cohort dari candle 1D yang dibentuk dari 6 candle 4H (hari UTC); bot dipanggil tiap candle 4H tertutup (menit ke-7).
+Nama: Muhammad Fandy Abussyeh; NIM: 25110200039; Kelas: Finance and Investment. Modal virtual Rp100.000.000. Long-only, tanpa short/margin/leverage. Timeframe: keputusan cohort dari candle 1D yang dibentuk dari 6 candle 4H (hari UTC); bot dipanggil tiap candle 4H tertutup (menit ke-7).
 
 ## Universe (8 pasangan IDR) — `config/universe.json`
 BTC, XRP, ETH, DOGE, TRX, BNB, ADA, SOL. Kriteria diukur pada AWAL backtest (4 Nov 2023): (1) median nilai transaksi harian 90 hari sebelumnya tertinggi, (2) data >=95% hari, (3) bukan stablecoin, (4) median spread snapshot <=1% (VELO gugur: 4,5%; SOL peringkat 9 masuk), (5) masih diperdagangkan saat freeze. Survivorship bias: 292 pasangan belum listing pada awal backtest, STIK & ARB gugur karena data <95%, dan pasangan yang sudah delisting tidak tercakup -> hasil cenderung optimis.
