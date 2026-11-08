@@ -1,0 +1,436 @@
+pair,hari_valid,median_nilai_idr,lolos,alasan
+BTCIDR,90,8937018987,true,
+XRPIDR,90,3487362407,true,
+ETHIDR,90,3216292774,true,
+DOGEIDR,90,1256599408,true,
+TRXIDR,90,921203147,true,
+BNBIDR,90,662328695,true,
+ADAIDR,90,650039995,true,
+STIKIDR,44,645044945,false,data <95% hari
+VELOIDR,90,561367938,true,
+SOLIDR,90,484643111,true,
+LTCIDR,90,329680459,true,
+ARBIDR,9,278807093,false,data <95% hari
+HBARIDR,90,217301189,true,
+DOTIDR,90,203250968,true,
+ZILIDR,90,129939869,true,
+LINKIDR,90,91646741,true,
+SANDIDR,90,75211516,true,
+DEPIDR,90,71650931,true,
+WAVESIDR,90,71394025,true,
+TMGIDR,90,57228917,true,
+GRTIDR,90,55709976,true,
+WEMIXIDR,90,49688215,true,
+ALGOIDR,90,39532663,true,
+AVAXIDR,90,38362992,true,
+MANAIDR,90,36001657,true,
+DGBIDR,90,35193622,true,
+ATOMIDR,90,34464097,true,
+ETCIDR,90,34409116,true,
+REPIDR,90,32690265,true,
+CKBIDR,90,30538161,true,
+CELRIDR,38,29389608,false,data <95% hari
+HOTIDR,90,28903675,true,
+CRVIDR,90,24543399,true,
+GALAGAMESIDR,90,24138054,true,
+FILIDR,90,23671085,true,
+VEXIDR,90,22723748,true,
+APEIDR,90,22520820,true,
+JASMYIDR,51,21305137,false,data <95% hari
+AUCTIONIDR,23,20093262,false,data <95% hari
+QNTIDR,90,20009230,true,
+UCJLIDR,9,19375677,false,data <95% hari
+OGNIDR,90,19071523,true,
+MCTIDR,90,18070452,true,
+API3IDR,65,17207965,false,data <95% hari
+COMPIDR,90,16905470,true,
+METAIDR,90,16630161,true,
+TENIDR,90,16508294,true,
+WLDIDR,86,15616526,true,
+NEARIDR,90,15483341,true,
+AMPIDR,90,15242320,true,
+ANKRIDR,90,14168607,true,
+EGLDIDR,90,13799932,true,
+XTZIDR,90,13679947,true,
+UNIIDR,90,13285449,true,
+TELIDR,90,13221916,true,
+CAKEIDR,90,12971976,true,
+ACHIDR,90,12863941,true,
+AXSIDR,90,12765254,true,
+AIOZIDR,90,12712053,true,
+LPTIDR,90,12229169,true,
+GNOIDR,30,12097531,false,data <95% hari
+VETIDR,90,12089434,true,
+SFIIDR,90,11808586,true,
+ALICEIDR,90,11004702,true,
+ENJIDR,89,10892464,true,
+RVNIDR,90,10851975,true,
+CHZIDR,90,10592075,true,
+KDAGIDR,90,10145620,true,
+CROIDR,90,9591361,true,
+CELOIDR,90,9052702,true,
+THETAIDR,90,8855960,true,
+NRGIDR,90,8418860,true,
+SUSHIIDR,90,8377471,true,
+FLRIDR,90,7684588,true,
+DFGIDR,90,7672581,true,
+VCGIDR,90,6961105,true,
+HNTIDR,90,6923337,true,
+INJIDR,89,6830865,true,
+ENSIDR,44,6272788,false,data <95% hari
+AUDIOIDR,90,5953642,true,
+YFIIDR,90,5953629,true,
+COLIDR,89,5827811,true,
+HIVEIDR,90,5630555,true,
+MRSIDR,81,5527478,false,data <95% hari
+ORBSIDR,89,5061521,true,
+GMTIDR,90,4750549,true,
+SNXIDR,90,4736030,true,
+IOTAIDR,90,4383215,true,
+KSMIDR,87,3843637,true,
+XVSIDR,88,3809593,true,
+NEOIDR,90,3733766,true,
+IOSTIDR,90,3717504,true,
+TFUELIDR,90,3582632,true,
+RSRIDR,89,3565204,true,
+FLUXIDR,90,3465735,true,
+LQTYIDR,87,3373470,true,
+ZRXIDR,88,3242800,true,
+BLURIDR,85,3147664,false,data <95% hari
+RPLIDR,90,2853604,true,
+HARTIDR,90,2834325,true,
+WOOIDR,88,2539290,true,
+CTSIIDR,86,2464481,true,
+IOTXIDR,87,2362390,true,
+THRESHOLDIDR,89,2125880,true,
+KNCIDR,88,2121538,true,
+UMAIDR,82,1736775,false,data <95% hari
+BATIDR,90,1628775,true,
+LDOIDR,88,1596861,true,
+SPACEIDIDR,86,1509520,true,
+SFPIDR,79,1498941,false,data <95% hari
+CHRIDR,88,1491942,true,
+STGIDR,89,1489468,true,
+C98IDR,89,1475228,true,
+SKLIDR,87,1453580,true,
+JSTIDR,88,1443297,true,
+GTCIDR,50,1395423,false,data <95% hari
+BICOIDR,85,1358134,false,data <95% hari
+NUSAIDR,89,1346920,true,
+SSVIDR,74,1325520,false,data <95% hari
+HIGHIDR,78,1313729,false,data <95% hari
+MASKIDR,75,1273172,false,data <95% hari
+LYFELIDR,86,1154326,true,
+IMXIDR,88,1149907,true,
+XAUTIDR,88,1147627,true,
+ONTIDR,86,1121882,true,
+CVXIDR,81,1035597,false,data <95% hari
+PAXGIDR,86,945664,true,
+OKBIDR,82,725326,false,data <95% hari
+RLCIDR,83,606740,false,data <95% hari
+GLMIDR,81,540284,false,data <95% hari
+CVCIDR,87,495891,true,
+WBTCIDR,87,403136,true,
+LEOIDR,64,200613,false,data <95% hari
+NEXOIDR,70,159055,false,data <95% hari
+1INCHIDR,0,0,false,tidak ada data
+AAVEIDR,0,0,false,tidak ada data
+AAPLXIDR,0,0,false,belum listing pada awal backtest
+ABIDR,0,0,false,belum listing pada awal backtest
+ACEIDR,0,0,false,belum listing pada awal backtest
+ACNIDR,0,0,false,belum listing pada awal backtest
+ACSIDR,0,0,false,belum listing pada awal backtest
+ACTSOLIDR,0,0,false,belum listing pada awal backtest
+AEROIDR,0,0,false,belum listing pada awal backtest
+AEVOIDR,0,0,false,belum listing pada awal backtest
+AGIIDR,0,0,false,belum listing pada awal backtest
+AIIDR,0,0,false,belum listing pada awal backtest
+AIHIDR,0,0,false,belum listing pada awal backtest
+AIXBTIDR,0,0,false,belum listing pada awal backtest
+ALEIDR,0,0,false,belum listing pada awal backtest
+ALLOIDR,0,0,false,belum listing pada awal backtest
+ALTLAYERIDR,0,0,false,belum listing pada awal backtest
+AMZNXIDR,0,0,false,belum listing pada awal backtest
+ANIMEIDR,0,0,false,belum listing pada awal backtest
+ANOAIDR,0,0,false,belum listing pada awal backtest
+APEXIDR,0,0,false,belum listing pada awal backtest
+APUIDR,0,0,false,belum listing pada awal backtest
+ARCIDR,0,0,false,belum listing pada awal backtest
+ARKMIDR,0,0,false,belum listing pada awal backtest
+ASETQUIDR,0,0,false,belum listing pada awal backtest
+ASTERIDR,0,0,false,belum listing pada awal backtest
+ATHIDR,0,0,false,belum listing pada awal backtest
+AUSDIDR,0,0,false,belum listing pada awal backtest
+AVAIDR,0,0,false,belum listing pada awal backtest
+AVNTIDR,0,0,false,belum listing pada awal backtest
+AXLIDR,0,0,false,belum listing pada awal backtest
+AZTECIDR,0,0,false,belum listing pada awal backtest
+BANANAS31IDR,0,0,false,belum listing pada awal backtest
+BUILDONIDR,0,0,false,belum listing pada awal backtest
+B2IDR,0,0,false,belum listing pada awal backtest
+BANIDR,0,0,false,belum listing pada awal backtest
+BANANAIDR,0,0,false,belum listing pada awal backtest
+BANDIDR,0,0,false,belum listing pada awal backtest
+BANKIDR,0,0,false,belum listing pada awal backtest
+BCHIDR,0,0,false,data <95% hari
+BEAMIDR,0,0,false,belum listing pada awal backtest
+BEATIDR,0,0,false,belum listing pada awal backtest
+BGBIDR,0,0,false,belum listing pada awal backtest
+BIOIDR,0,0,false,belum listing pada awal backtest
+BIRBIDR,0,0,false,belum listing pada awal backtest
+BMTIDR,0,0,false,belum listing pada awal backtest
+BNKRIDR,0,0,false,belum listing pada awal backtest
+BNXNEWIDR,0,0,false,belum listing pada awal backtest
+BOMEIDR,0,0,false,belum listing pada awal backtest
+BONKIDR,0,0,false,belum listing pada awal backtest
+BPIDR,0,0,false,belum listing pada awal backtest
+BRIDR,0,0,false,belum listing pada awal backtest
+BRETTIDR,0,0,false,belum listing pada awal backtest
+BSVIDR,0,0,false,tidak ada data
+CASTIDR,0,0,false,belum listing pada awal backtest
+CATIDR,0,0,false,belum listing pada awal backtest
+CATIIDR,0,0,false,belum listing pada awal backtest
+CGPTIDR,0,0,false,belum listing pada awal backtest
+CHEEMSIDR,0,0,false,belum listing pada awal backtest
+CHILLGUYIDR,0,0,false,belum listing pada awal backtest
+CJLIDR,0,0,false,belum listing pada awal backtest
+CNGIDR,0,0,false,belum listing pada awal backtest
+COINXIDR,0,0,false,belum listing pada awal backtest
+CONXIDR,0,0,false,belum listing pada awal backtest
+COWIDR,0,0,false,belum listing pada awal backtest
+CRCLXIDR,0,0,false,belum listing pada awal backtest
+CREAMIDR,0,0,false,belum listing pada awal backtest
+CROAKIDR,0,0,false,belum listing pada awal backtest
+CSTIDR,0,0,false,belum listing pada awal backtest
+CTCIDR,0,0,false,belum listing pada awal backtest
+CTKIDR,0,0,false,belum listing pada awal backtest
+CYBERIDR,0,0,false,belum listing pada awal backtest
+DEGENIDR,0,0,false,belum listing pada awal backtest
+DEXEIDR,0,0,false,belum listing pada awal backtest
+DODOIDR,0,0,false,belum listing pada awal backtest
+DOGSIDR,0,0,false,belum listing pada awal backtest
+DRXIDR,0,0,false,belum listing pada awal backtest
+DUSKIDR,0,0,false,belum listing pada awal backtest
+EDENIDR,0,0,false,belum listing pada awal backtest
+EDENAIDR,0,0,false,belum listing pada awal backtest
+EIGENIDR,0,0,false,belum listing pada awal backtest
+ENAIDR,0,0,false,belum listing pada awal backtest
+ERNIDR,0,0,false,belum listing pada awal backtest
+ESPIDR,0,0,false,belum listing pada awal backtest
+ETHFIIDR,0,0,false,belum listing pada awal backtest
+FANCIDR,0,0,false,belum listing pada awal backtest
+FARTCOINIDR,0,0,false,belum listing pada awal backtest
+FETIDR,0,0,false,belum listing pada awal backtest
+FFIDR,0,0,false,belum listing pada awal backtest
+FLOKIIDR,0,0,false,belum listing pada awal backtest
+FUELIDR,0,0,false,belum listing pada awal backtest
+FUNIDR,0,0,false,belum listing pada awal backtest
+GAME2IDR,0,0,false,belum listing pada awal backtest
+GENIUSIDR,0,0,false,belum listing pada awal backtest
+GLIDRIDR,0,0,false,tidak ada data
+GIDIDR,0,0,false,belum listing pada awal backtest
+GIGAIDR,0,0,false,belum listing pada awal backtest
+GIGGLEIDR,0,0,false,belum listing pada awal backtest
+GMXIDR,0,0,false,belum listing pada awal backtest
+GOATIDR,0,0,false,belum listing pada awal backtest
+GOOGLXIDR,0,0,false,belum listing pada awal backtest
+GPSIDR,0,0,false,belum listing pada awal backtest
+GRASSIDR,0,0,false,belum listing pada awal backtest
+GRAVITYIDR,0,0,false,belum listing pada awal backtest
+GRIFFAINIDR,0,0,false,belum listing pada awal backtest
+GWEIIDR,0,0,false,belum listing pada awal backtest
+HUMANITYIDR,0,0,false,belum listing pada awal backtest
+HAEDALIDR,0,0,false,belum listing pada awal backtest
+HFTIDR,0,0,false,belum listing pada awal backtest
+HMSTRIDR,0,0,false,belum listing pada awal backtest
+HOMEIDR,0,0,false,belum listing pada awal backtest
+HUMAIDR,0,0,false,belum listing pada awal backtest
+HYPEIDR,0,0,false,belum listing pada awal backtest
+HYPERIDR,0,0,false,belum listing pada awal backtest
+MYROIDR,0,0,false,belum listing pada awal backtest
+MYXIDR,0,0,false,belum listing pada awal backtest
+ICNTIDR,0,0,false,belum listing pada awal backtest
+ICPIDR,0,0,false,belum listing pada awal backtest
+IDXIDR,0,0,false,belum listing pada awal backtest
+IDTIDR,0,0,false,belum listing pada awal backtest
+ILVIDR,0,0,false,belum listing pada awal backtest
+INDRIDR,0,0,false,belum listing pada awal backtest
+IOIDR,0,0,false,belum listing pada awal backtest
+IQIDR,0,0,false,belum listing pada awal backtest
+ISLMIDR,0,0,false,belum listing pada awal backtest
+JELLYJELLYIDR,0,0,false,belum listing pada awal backtest
+JOEIDR,0,0,false,belum listing pada awal backtest
+JUPIDR,0,0,false,belum listing pada awal backtest
+JTOIDR,0,0,false,belum listing pada awal backtest
+KAIAIDR,0,0,false,belum listing pada awal backtest
+KAITOIDR,0,0,false,belum listing pada awal backtest
+KERNELIDR,0,0,false,belum listing pada awal backtest
+KMNOIDR,0,0,false,belum listing pada awal backtest
+KOMAIDR,0,0,false,belum listing pada awal backtest
+KTAIDR,0,0,false,belum listing pada awal backtest
+LIGHTERIDR,0,0,false,belum listing pada awal backtest
+LINEAIDR,0,0,false,belum listing pada awal backtest
+LISTAIDR,0,0,false,belum listing pada awal backtest
+L3IDR,0,0,false,belum listing pada awal backtest
+LSKIDR,0,0,false,belum listing pada awal backtest
+LUNAIDR,0,0,false,data <95% hari
+LUNCIDR,0,0,false,belum listing pada awal backtest
+MAGICIDR,0,0,false,belum listing pada awal backtest
+MANTAIDR,0,0,false,belum listing pada awal backtest
+MARSCOINIDR,0,0,false,belum listing pada awal backtest
+MAVIDR,0,0,false,belum listing pada awal backtest
+MAVIAIDR,0,0,false,belum listing pada awal backtest
+MEIDR,0,0,false,belum listing pada awal backtest
+MELANIAIDR,0,0,false,belum listing pada awal backtest
+MEMEIDR,0,0,false,belum listing pada awal backtest
+METIDR,0,0,false,belum listing pada awal backtest
+METISIDR,0,0,false,belum listing pada awal backtest
+MEWIDR,0,0,false,belum listing pada awal backtest
+MITOIDR,0,0,false,belum listing pada awal backtest
+MNTIDR,0,0,false,belum listing pada awal backtest
+MOCAIDR,0,0,false,belum listing pada awal backtest
+MOGIDR,0,0,false,belum listing pada awal backtest
+MOLTIDR,0,0,false,belum listing pada awal backtest
+MONIDR,0,0,false,belum listing pada awal backtest
+MOODENGIDR,0,0,false,belum listing pada awal backtest
+MORPHOIDR,0,0,false,belum listing pada awal backtest
+MOVEIDR,0,0,false,belum listing pada awal backtest
+MPROIDR,0,0,false,belum listing pada awal backtest
+MTCIDR,0,0,false,belum listing pada awal backtest
+MUBARAKIDR,0,0,false,belum listing pada awal backtest
+NBTNEWIDR,0,0,false,belum listing pada awal backtest
+NEIROCTOIDR,0,0,false,belum listing pada awal backtest
+NEORPNEWIDR,0,0,false,belum listing pada awal backtest
+NEONIDR,0,0,false,belum listing pada awal backtest
+NEWTIDR,0,0,false,belum listing pada awal backtest
+NIGHTIDR,0,0,false,belum listing pada awal backtest
+NMDIDR,0,0,false,belum listing pada awal backtest
+NMRIDR,0,0,false,belum listing pada awal backtest
+NOMIDR,0,0,false,belum listing pada awal backtest
+NOVAIDR,0,0,false,belum listing pada awal backtest
+NPCIDR,0,0,false,belum listing pada awal backtest
+NVDAXIDR,0,0,false,belum listing pada awal backtest
+NXAIDR,0,0,false,belum listing pada awal backtest
+OKUSDIDR,0,0,false,belum listing pada awal backtest
+ONDOIDR,0,0,false,belum listing pada awal backtest
+ONLIDR,0,0,false,belum listing pada awal backtest
+OPIDR,0,0,false,belum listing pada awal backtest
+ORCAIDR,0,0,false,belum listing pada awal backtest
+ORDERLYIDR,0,0,false,belum listing pada awal backtest
+PAYAIIDR,0,0,false,belum listing pada awal backtest
+PENDLEIDR,0,0,false,belum listing pada awal backtest
+PENGUIDR,0,0,false,belum listing pada awal backtest
+PEOPLEIDR,0,0,false,belum listing pada awal backtest
+PEPEIDR,0,0,false,belum listing pada awal backtest
+PLPAIDR,0,0,false,belum listing pada awal backtest
+PLUMEIDR,0,0,false,belum listing pada awal backtest
+GNSIDR,0,0,false,belum listing pada awal backtest
+PHAIDR,0,0,false,belum listing pada awal backtest
+PIEVERSEIDR,0,0,false,belum listing pada awal backtest
+PIPPINIDR,0,0,false,belum listing pada awal backtest
+PIXELIDR,0,0,false,belum listing pada awal backtest
+PMIDR,0,0,false,belum listing pada awal backtest
+PNUTIDR,0,0,false,belum listing pada awal backtest
+POLSIDR,0,0,false,belum listing pada awal backtest
+POLIDR,0,0,false,belum listing pada awal backtest
+PONDIDR,0,0,false,belum listing pada awal backtest
+PONKEIDR,0,0,false,belum listing pada awal backtest
+PORTALIDR,0,0,false,belum listing pada awal backtest
+POPCATIDR,0,0,false,belum listing pada awal backtest
+POWRIDR,0,0,false,belum listing pada awal backtest
+PRIMEIDR,0,0,false,belum listing pada awal backtest
+PROMIDR,0,0,false,belum listing pada awal backtest
+PROVEIDR,0,0,false,belum listing pada awal backtest
+PUFFERIDR,0,0,false,belum listing pada awal backtest
+PUMPIDR,0,0,false,belum listing pada awal backtest
+PYTHIDR,0,0,false,belum listing pada awal backtest
+RADIDR,0,0,false,belum listing pada awal backtest
+RAREIDR,0,0,false,belum listing pada awal backtest
+RAYIDR,0,0,false,belum listing pada awal backtest
+REDIDR,0,0,false,belum listing pada awal backtest
+REQIDR,0,0,false,belum listing pada awal backtest
+REZIDR,0,0,false,belum listing pada awal backtest
+RIVERIDR,0,0,false,belum listing pada awal backtest
+RENDERIDR,0,0,false,belum listing pada awal backtest
+SAFEIDR,0,0,false,belum listing pada awal backtest
+SAHARAIDR,0,0,false,belum listing pada awal backtest
+SAPIENIDR,0,0,false,belum listing pada awal backtest
+SENTIDR,0,0,false,belum listing pada awal backtest
+SHIBIDR,0,0,false,belum listing pada awal backtest
+SHELLIDR,0,0,false,belum listing pada awal backtest
+SIGNIDR,0,0,false,belum listing pada awal backtest
+SHOWIDR,0,0,false,tidak ada data
+SKRIDR,0,0,false,belum listing pada awal backtest
+SKYIDR,0,0,false,belum listing pada awal backtest
+SKYAIDR,0,0,false,belum listing pada awal backtest
+SKYAIIDR,0,0,false,belum listing pada awal backtest
+SNIDR,0,0,false,belum listing pada awal backtest
+SNTIDR,0,0,false,belum listing pada awal backtest
+SOLAYERIDR,0,0,false,belum listing pada awal backtest
+SOLVIDR,0,0,false,belum listing pada awal backtest
+SOMIIDR,0,0,false,belum listing pada awal backtest
+SONICIDR,0,0,false,belum listing pada awal backtest
+SOONIDR,0,0,false,belum listing pada awal backtest
+SPELLIDR,0,0,false,belum listing pada awal backtest
+SPKIDR,0,0,false,belum listing pada awal backtest
+SPXIDR,0,0,false,belum listing pada awal backtest
+SQDIDR,0,0,false,belum listing pada awal backtest
+STOIDR,0,0,false,belum listing pada awal backtest
+STRKIDR,0,0,false,belum listing pada awal backtest
+STREAMIDR,0,0,false,belum listing pada awal backtest
+SUIIDR,0,0,false,belum listing pada awal backtest
+SUNIDR,0,0,false,belum listing pada awal backtest
+SUNDOGIDR,0,0,false,belum listing pada awal backtest
+SUPERVERSEIDR,0,0,false,belum listing pada awal backtest
+SXTIDR,0,0,false,belum listing pada awal backtest
+SYRUPIDR,0,0,false,belum listing pada awal backtest
+TAGIDR,0,0,false,belum listing pada awal backtest
+TAIKOIDR,0,0,false,belum listing pada awal backtest
+TIAIDR,0,0,false,belum listing pada awal backtest
+TLMIDR,0,0,false,belum listing pada awal backtest
+TNSRIDR,0,0,false,belum listing pada awal backtest
+TOKENIDR,0,0,false,belum listing pada awal backtest
+TONIDR,0,0,false,belum listing pada awal backtest
+TOSHIIDR,0,0,false,belum listing pada awal backtest
+TRACIDR,0,0,false,belum listing pada awal backtest
+TRBIDR,0,0,false,belum listing pada awal backtest
+TRIAIDR,0,0,false,belum listing pada awal backtest
+TROLLSOLIDR,0,0,false,belum listing pada awal backtest
+TRUMPIDR,0,0,false,belum listing pada awal backtest
+TSLAXIDR,0,0,false,belum listing pada awal backtest
+TURBOIDR,0,0,false,belum listing pada awal backtest
+TURTLEIDR,0,0,false,belum listing pada awal backtest
+UBIDR,0,0,false,belum listing pada awal backtest
+UAIIDR,0,0,false,belum listing pada awal backtest
+UNMDIDR,0,0,false,belum listing pada awal backtest
+USATIDR,0,0,false,belum listing pada awal backtest
+USDXIDR,0,0,false,belum listing pada awal backtest
+USELESSIDR,0,0,false,belum listing pada awal backtest
+VANRYIDR,0,0,false,belum listing pada awal backtest
+VELODROMEIDR,0,0,false,belum listing pada awal backtest
+VELVETIDR,0,0,false,belum listing pada awal backtest
+VINEIDR,0,0,false,belum listing pada awal backtest
+VIRTUALSIDR,0,0,false,belum listing pada awal backtest
+VVVIDR,0,0,false,belum listing pada awal backtest
+W3FIDR,0,0,false,belum listing pada awal backtest
+W3S2IDR,0,0,false,belum listing pada awal backtest
+WCTIDR,0,0,false,belum listing pada awal backtest
+WEALTHIDR,0,0,false,belum listing pada awal backtest
+WIFIDR,0,0,false,belum listing pada awal backtest
+WLFIIDR,0,0,false,belum listing pada awal backtest
+WORMHOLEIDR,0,0,false,belum listing pada awal backtest
+XCNIDR,0,0,false,belum listing pada awal backtest
+XDCIDR,0,0,false,tidak ada data
+XPLIDR,0,0,false,belum listing pada awal backtest
+XLMIDR,0,0,false,tidak ada data
+XRIDR,0,0,false,belum listing pada awal backtest
+YGGIDR,0,0,false,belum listing pada awal backtest
+ZAMAIDR,0,0,false,belum listing pada awal backtest
+ZBCNIDR,0,0,false,belum listing pada awal backtest
+ZENIDR,0,0,false,belum listing pada awal backtest
+ZEREBROIDR,0,0,false,belum listing pada awal backtest
+ZKCIDR,0,0,false,belum listing pada awal backtest
+ZKJIDR,0,0,false,belum listing pada awal backtest
+ZORAIDR,0,0,false,belum listing pada awal backtest
+ZROIDR,0,0,false,belum listing pada awal backtest
+KITEIDR,0,0,false,belum listing pada awal backtest

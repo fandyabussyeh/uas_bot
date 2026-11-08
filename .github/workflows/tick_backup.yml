@@ -1,0 +1,17 @@
+# Penjadwal CADANGAN independen — ditambahkan 8 Nov 2026 pasca-freeze (perbaikan operasional, TIDAK mengubah aturan/parameter/universe).
+# Alasan: fire terjadwal tick.yml sering ditunda/di-drop GitHub (bar 08:00 UTC 7 Nov & fire 00:07/00:22 UTC 8 Nov tidak pernah dieksekusi),
+# sehingga uptime turun. File TERPISAH dari tick.yml agar GitHub tidak membatalkan keduanya sekaligus; menit :37 dan :52
+# berbeda dari :07/:22 di tick.yml -> 4 peluang per candle 4H. Idempotency di /api/tick membuat panggilan ganda menjadi no-op.
+name: tick-backup
+on:
+  schedule: [{ cron: '37 0,4,8,12,16,20 * * *' }, { cron: '52 0,4,8,12,16,20 * * *' }]
+  workflow_dispatch: {}
+jobs:
+  call:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Panggil /api/tick
+        run: |
+          set -euo pipefail
+          curl --fail-with-body --silent --show-error --max-time 120 -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" "${{ secrets.TICK_URL }}" | tee tick_backup.json
+          jq -e '.status == "processed" or .status == "duplicate" or .status == "duplicate_lock" or .status == "killed"' tick_backup.json

@@ -16,6 +16,14 @@ Strategi: lihat `STRATEGI.md`. Dry run: semua order disimulasikan terhadap order
 9. **Forward test:** soal meminta 10 hari; untuk tenggat 14 Nov disepakati 7 hari. Catat sebagai deviasi dan jangan klaim 10 hari. Mulai hitung dari tick cron pertama yang berhasil setelah reset state. Kill switch: `curl -H "Authorization: Bearer <CRON_SECRET>" "https://<proyek>.vercel.app/api/kill?on=1"` (matikan dengan `on=0`); tercatat di log.
 10. **Akhir:** `curl -H "Authorization: Bearer <CRON_SECRET>" https://<proyek>.vercel.app/api/export > out/logs.json`; unduh candle 4H sampai akhir jendela ke `data/`; `node scripts/hitung_ulang.mjs out/logs.json` -> `out/hasil_forward.json`; `node scripts/make_dashboard.mjs` -> `out/dashboard.html` (offline). Tulis refleksi di dashboard.
 
+## Catatan operasional pasca-freeze (TIDAK menyentuh aturan, parameter, atau universe)
+
+Dicatat sesuai ketentuan soal bahwa perbaikan operasional/infrastruktur boleh dilakukan tanpa mengubah aturan, asal tercatat.
+
+- **8 Nov 2026 — keandalan penjadwal.** Riwayat publik Actions menunjukkan beberapa fire terjadwal GitHub tidak dieksekusi/telat berat (mis. fire 04:07/04:22, 12:07/12:22 UTC 7 Nov hilang -> candle bar 08:00 UTC tidak diproses; fire 00:07/00:22 UTC 8 Nov jauh melewati 11.00 WIB). Dampak diukur lewat `lateSec`/uptime pada log. Memperbaiki: satu **penjadwal cadangan independen** `.github/workflows/tick_backup.yml` (jalankan jam :37 & :52 UTC tiap candle 4H, memakai secret `CRON_SECRET` + `TICK_URL` yang sama di tingkat repositori) — file dipisah dari `tick.yml` agar GitHub tidak membatalkan keduanya bersamaan, dan panggilan ganda otomatis jadi "duplicate" (idempotency). Aturan strategi, parameter, universe, dan basis kode sinyal (`lib/core.mjs` dkk) **tidak diubah**; commit ini + README ini adalah catatannya. Repositori juga dijadikan publik (`visibility: public`) agar riwayat commit — termasuk commit freeze `519e62f` — bisa diaudit.
+- **Artefak statis di luar repo (git-ignored / untracked).** `data/universe.json` (root repo, peringkat volume mentah dari `step2_universe.mjs`) kini **stale**: memuat VELOIDR, sedangkan universe beku sesuai `config/universe.json` adalah BTCIDR, XRPIDR, ETHIDR, DOGEIDR, TRXIDR, BNBIDR, ADAIDR, SOLIDR (VELO gugur filter spread; berlaku `config/`). Berkas itu tidak dipakai kode; versi terbaru output `step2` ada di `seleksi_universe.csv` (repo root, untracked). Hasil beku acuan: `config/universe.json` + commit freeze.
+- **Template dashboard.** `scripts/dashboard_template.html` sempat mencantumkan hash freeze `466bf39`; dibetulkan menjadi `519e62f` (2026-11-07 07:56 WIB) — arsip terpasang lagi benar.
+
 ## Yang BELUM diuji
 Uji lokal memakai Indodax tiruan (candle asli dari CSV, order book sintetis). Belum diuji nyata: format respons `server_time`, akses Indodax dari Vercel, Upstash, GitHub Actions. Lakukan langkah 6 sebelum freeze.
 
