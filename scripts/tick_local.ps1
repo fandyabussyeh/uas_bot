@@ -15,6 +15,7 @@ if (-not $url) { $url = 'https://uasbot.vercel.app/api/tick' }
 try {
   $r = Invoke-RestMethod -Uri $url -Headers @{ Authorization = "Bearer $secret" } -TimeoutSec 90
   Write-Output ("OK " + (Get-Date).ToUniversalTime().ToString('o') + " status=" + $r.status + " barT=" + $r.barT + " lateSec=" + $r.lateSec + " orders=" + $r.orders + " eq=" + $r.eq)
+  exit 0
 } catch {
   Write-Output ("ERROR " + (Get-Date).ToUniversalTime().ToString('o') + " " + $_.Exception.Message)
   exit 1
