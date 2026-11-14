@@ -22,7 +22,9 @@ export async function compute(L, { replay = true, fee = Number(process.env.FEE_T
   R.ops = { candle_total: nCandle, candle_tepat_waktu: ok.size, uptime: ok.size / nCandle, panggilan_total: calls.length, duplikat: calls.filter(c => c.status.startsWith('duplicate')).length, killed: calls.filter(c => c.status === 'killed').length, error_panggilan: calls.filter(c => c.status === 'error').length,
     error_api: L.errors.length, kill_switch_log: L.killswitch.length, telat_median_detik: [...proc.map(c => c.lateSec)].sort((a, b) => a - b)[Math.floor(proc.length / 2)], telat_maks_detik: Math.max(...proc.map(c => c.lateSec)) };
   R.kurva_forward = [[proc[0].barT, 1e8], ...proc.map(c => [c.barT + H4, c.eq])];
-  try { const SP = JSON.parse(fs.readFileSync('config/spreads.json', 'utf8')); R.spread = {}; for (const p of Object.keys(SP)) { const v = L.snapshots.filter(s => s.pair === p).map(s => s.spread_pct / 100).sort((a, b) => a - b); R.spread[p] = { dipakai_backtest: SP[p], median_semua_snapshot: v.length ? v[Math.floor(v.length / 2)] : null, n_snapshot: v.length }; } } catch { }
+  // seluruh snapshot = snapshot bot (forward test) + snapshot laptop (masa persiapan, digabung scripts/gabung_snapshot.mjs)
+  const ALLSNAP = [...(L.snapshots || []), ...(L.snapshots_laptop || [])];
+  try { const SP = JSON.parse(fs.readFileSync('config/spreads.json', 'utf8')); R.spread = {}; for (const p of Object.keys(SP)) { const v = ALLSNAP.filter(s => s.pair === p).map(s => s.spread_pct / 100).sort((a, b) => a - b); R.spread[p] = { dipakai_backtest: SP[p], median_semua_snapshot: v.length ? v[Math.floor(v.length / 2)] : null, n_snapshot: v.length }; } } catch { }
   R.equity_harian = L.equity.map(e => ({ hari_wib: e.wibDay, eq: e.eq }));
   if (replay) {
     const bt = await import('../lib/bt.mjs'), sig = [];
